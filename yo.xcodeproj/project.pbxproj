@@ -86,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66FDBD911E82F5A2000B9939 /* CommandLineKit */ = {
+			isa = PBXGroup;
+			children = (
+				9A16F3131AEAA2AC001336EA /* CommandLine.swift */,
+				9A16F3141AEAA2AC001336EA /* Option.swift */,
+				9A16F3151AEAA2AC001336EA /* StringExtensions.swift */,
+			);
+			name = CommandLineKit;
+			sourceTree = "<group>";
+		};
 		841717891ABCA0CE00150A32 = {
 			isa = PBXGroup;
 			children = (
@@ -111,9 +121,7 @@
 		841717941ABCA0CE00150A32 /* yo */ = {
 			isa = PBXGroup;
 			children = (
-				9A16F3131AEAA2AC001336EA /* CommandLine.swift */,
-				9A16F3141AEAA2AC001336EA /* Option.swift */,
-				9A16F3151AEAA2AC001336EA /* StringExtensions.swift */,
+				66FDBD911E82F5A2000B9939 /* CommandLineKit */,
 				841717B21ABCA11300150A32 /* AppDelegate.swift */,
 				841717B31ABCA11300150A32 /* ViewController.swift */,
 				841717B41ABCA11300150A32 /* YoCommandLine.swift */,
