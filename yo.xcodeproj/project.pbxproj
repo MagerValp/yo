@@ -16,8 +16,6 @@
 		841717B91ABCA11300150A32 /* YoNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841717B51ABCA11300150A32 /* YoNotification.swift */; };
 		841717C21ABCA40200150A32 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 841717C11ABCA40200150A32 /* README.md */; };
 		9A024C6B1AF009B800C34EE4 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 9A024C6A1AF009B800C34EE4 /* CHANGELOG.md */; };
-		9A024C6C1AF00ADE00C34EE4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 841717C11ABCA40200150A32 /* README.md */; };
-		9A024C6D1AF00AE200C34EE4 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 9A024C6A1AF009B800C34EE4 /* CHANGELOG.md */; };
 		9A16F3161AEAA2AC001336EA /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16F3131AEAA2AC001336EA /* CommandLine.swift */; };
 		9A16F3171AEAA2AC001336EA /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16F3141AEAA2AC001336EA /* Option.swift */; };
 		9A16F3181AEAA2AC001336EA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16F3151AEAA2AC001336EA /* StringExtensions.swift */; };
@@ -198,14 +196,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Durham Academy";
 				TargetAttributes = {
 					841717911ABCA0CE00150A32 = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0820;
 					};
 					841717A11ABCA0CE00150A32 = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0820;
 						TestTargetID = 841717911ABCA0CE00150A32;
 					};
 				};
@@ -234,8 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A024C6D1AF00AE200C34EE4 /* CHANGELOG.md in Resources */,
-				9A024C6C1AF00ADE00C34EE4 /* README.md in Resources */,
 				9A16F31A1AEAA335001336EA /* LICENSE in Resources */,
 				8417179A1ABCA0CE00150A32 /* Images.xcassets in Resources */,
 				9A16F32F1AEACCFC001336EA /* yo.sh in Resources */,
@@ -313,8 +311,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -323,6 +323,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -356,8 +357,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -366,6 +369,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -375,6 +379,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -391,6 +396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.sheagcraig.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -407,6 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.sheagcraig.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -427,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yo.app/Contents/MacOS/yo";
 			};
 			name = Debug;
@@ -444,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yo.app/Contents/MacOS/yo";
 			};
 			name = Release;
